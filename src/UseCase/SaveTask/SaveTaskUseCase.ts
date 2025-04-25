@@ -12,7 +12,6 @@ export default class SaveTaskUseCase implements UseCase<Promise<Task>, [dto: Sav
     this.taskRepository = taskRepositoryParam;
   }
 
-  // Optionnel : méthode pour injecter manuellement si nécessaire
   setTaskRepository(taskRepository: TaskRepository) {
     this.taskRepository = taskRepository;
   }

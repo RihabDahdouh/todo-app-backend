@@ -31,12 +31,12 @@ async create(@Body() dto: SaveTaskDto) {
   return useCase.handle(dto);
 }
 
-@Put('/tasks/:id') // ✅ fix route
+@Put('/tasks/:id') 
   async updateTask(
     @Param('id') id: string,
     @Body() saveTaskDto: SaveTaskDto,
   ) {
-    return this.taskService.update(Number(id), saveTaskDto); // ✅ cast en number
+    return this.taskService.update(Number(id), saveTaskDto); 
   }
 
 // @Patch(':id')
